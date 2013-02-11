@@ -1,6 +1,6 @@
 # Rake::Foodcritic
 
-TODO: Write a gem description
+Rake task for chef cookbooks
 
 ## Installation
 
@@ -18,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+load rake-foodcritic in your Rakefile:
+
+    require 'rake-foodcritic'
+
+And then, run rake-task *chef:foodcritic*
+
+    $ rake chef:foodcritic
 
 ## Contributing
 
