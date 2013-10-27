@@ -18,5 +18,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_dependency 'rake'
-  gem.add_dependency 'foodcritic'
+  gem.add_dependency 'foodcritic', '>= 3.0.0'
 end

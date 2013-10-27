@@ -7,9 +7,9 @@ namespace :chef do
     if Gem::Version.new("1.9.2") <= Gem::Version.new(RUBY_VERSION.dup)
       print "Running foodcritic ... "
       if File.exists?('cookbooks')
-        result = FoodCritic::Linter.new.check 'cookbooks', {}
+        result = FoodCritic::Linter.new.check cookbook_paths: ['cookbooks']
       else
-        result = FoodCritic::Linter.new.check '.', {}
+        result = FoodCritic::Linter.new.check cookbook_paths: '.'
       end
 
       if result.failed? or result.warnings.size > 0
